@@ -13,7 +13,7 @@
 
 ## Valgrind - Memcheck
 
-- Prvi alat koji je upotrebljen za analizu ovog projekta je _Memcheck_. Memcheck se koristi za otkrivanje grešaka u porgramu koje su vezane za memoriju.
+- Prvi alat koji je upotrebljen za analizu ovog projekta je Valgrind-ov _Memcheck_. Memcheck se koristi za otkrivanje grešaka u porgramu koje su vezane za memoriju.
 
 - Ukoliko bi se analiza projekta pokrenula nad originalnom verzijom Memcheck bi previše pažnje posvetio Qt funkcijama, što nije cilj ovih analiza, a i što bi dosta otežalo otkrivanje grešaka koje potiču iz koda originalnog projekta. Iz tog razloga, main funkcija je izmenjen na sledeći način.
 
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-- Ovako izmenjena main funkcija omogućava testiranje nekoliko najvećih klasa i njihovih funkcija u programu, a to su _EnergyLoss_, _PressureLoss_ i _Tcompesation_. Navedene klase nisu dominantne u odnosu na preostale klase iz projekta, ali je odlučeno da se testira njihov rad jer se mogu smatrati reprezentativnim. Tačnije, ni jedna od klasa u projektu nije dominantna, i sve klase su veoma jednostavne, bave se jednostavnim izračunavanjima po već unapred poznatim formulama, stoga je odlučeno da se testiraju ove tri klase kao prosečni predstavnici svih klasa u projektu. Takodje, definisan je veći broj konstanti pre main funkcije, jer nije bilo drugog načina za kreiranje instanci pomenutih klasa, i u originalnom projektu objekti se instanciraju upotrebom velikog broja magičnih konstanti za koje ne postoji nikakvo objašnjenje, što će kasnije u daljoj analizi biti svakako detaljnije obradjeno
+- Ovako izmenjena main funkcija omogućava testiranje nekoliko najvećih klasa i njihovih funkcija u programu, a to su _EnergyLoss_, _PressureLoss_ i _Tcompesation_. Navedene klase nisu dominantne u odnosu na preostale klase iz projekta, ali je odlučeno da se testira njihov rad jer se mogu smatrati reprezentativnim. Tačnije, ni jedna od klasa u projektu nije dominantna, i sve klase su veoma jednostavne, bave se jednostavnim izračunavanjima po već unapred poznatim formulama, stoga je odlučeno da se testiraju ove tri klase kao prosečni predstavnici svih klasa u projektu. Takodje, definisan je veći broj konstanti pre main funkcije, jer nije bilo drugog načina za kreiranje instanci pomenutih klasa, i u originalnom projektu objekti se instanciraju upotrebom velikog broja magičnih konstanti za koje ne postoji nikakvo objašnjenje, što će kasnije u daljoj analizi biti svakako detaljnije obradjeno.
 
 - Bitno je napomenuti su u kompajleru prosledjene opcije **-g -O0** u okviru _Makefile_-a kako bi se kod preveo u debug mode-u, i bez optimizacija i kako bi pronajdene greske ukazivala na linije u originalnom kodu, a ne nekom optimizovanom kodu.
 
@@ -89,9 +89,9 @@ int main(int argc, char *argv[])
 valgrind --leak-check=full --track-origins=yes --log-file=valgrind_memcheck.txt  ./main
 ```
 
-- Izlaz rada alata je preusmeren u fajl **valgrind_memcheck.txt**, a korišćene su i opcije _--leak-check=full_ i _--track-origins=yes_ kako bi se dobili deteljniji opisi
+- Izlaz rada alata je preusmeren u fajl **valgrind_memcheck.txt**, a korišćene su i opcije _--leak-check=full_ i _--track-origins=yes_ kako bi se dobili deteljniji opisi.
 
-- Pomenuti fajl se može pronaći [ovde](/valgrind/memcheck/valgrind_memcheck.txt)
+- Pomenuti fajl se može pronaći [ovde](/valgrind/memcheck/valgrind_memcheck.txt).
 
 - Na prvi pogled, pregledom sumiranog rada alata, može se reći da ne postoje nikakvi propusti u radu sa memorijom, ne postoje definitivno, indirektno ili mogluće izgubljeni blokovi. Mada može se rećida je ovo očekivano,jer kao što je već pomenuto, reč je o izizetno jednostavnih klasama koje se bave samo izračunavanjima na osnovu već poznatih vrednosti.
 
@@ -113,4 +113,115 @@ valgrind --leak-check=full --track-origins=yes --log-file=valgrind_memcheck.txt 
 ==28911== ERROR SUMMARY: 8 errors from 8 contexts (suppressed: 0 from 0)
 ```
 
-- Medjutim, alat ukazuje na veliki broj propusta vezano za upotrebu neinicijlizovanih vrednosti, što može predstavljati problem. Što u kombinaciji sa velikim brojem magičnih konstanti donosi dosta zabune u projekat.
+- Medjutim, alat ukazuje na veliki broj propusta vezano za upotrebu neinicijlizovanih vrednosti, što može predstavljati problem.
+
+- **Zaključak:** Ne postoji značajno curenje memorije u projektu, ali upotreba neinicijalizovanih vrednosti, posedbno u kombinaciji sa magičnim konstantama je veoma loša praksa i donosi dosta zabune u projekat.
+
+## Valgrind - Massif
+
+- Naredni alat koji je upotrebljen za analizu je Valgrind-ov alat _Massif_. Uz pomoć ovog alata se dobijaju informacije o preseku stanja hipa u toku izvršavanja programa.
+
+- Alat je pokrenut pozivanjem naredne komande:
+
+```
+valgrind --tool=massif ./main
+```
+
+- Rezultat rada alata je fajl _massif.out.93733_, medjutim format ovog fajla ljudima nije pogodan za čitanje, pa je upotrebljena naredna komanda kako bi se dobio čitljiv fajl:
+
+```
+ms_print massif.out.93733 > massif_graph.txt
+```
+
+- Graf kojie se nalazi u navedenom fajlu:
+
+```
+--------------------------------------------------------------------------------
+Command:            ./main
+Massif arguments:   (none)
+ms_print arguments: massif.out.93733
+--------------------------------------------------------------------------------
+
+
+    KB
+200.5^                                                                      :
+     |                                                                 @@  #:
+     |                                                              @:@@@@@#@
+     |                                                           :::@:@@@@@#@
+     |                                                          ::::@:@@@@@#@:
+     |                                                          ::::@:@@@@@#@:
+     |                                                          ::::@:@@@@@#@:
+     |                                                          ::::@:@@@@@#@:
+     |                                                          ::::@:@@@@@#@:
+     |                                                          ::::@:@@@@@#@:
+     |                                                          ::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+     |                                                         :::::@:@@@@@#@:
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   9.689
+
+Number of snapshots: 78
+ Detailed snapshots: [22, 33, 37, 41, 45, 47, 52, 61 (peak), 71]
+
+```
+
+- Iz iznad navedenog izveštaja se može videti da je massif napravio 78 preseka, a izdvojio je samo neke od njih. Vrhunac je dostignuT u 61. preseku kada je potrošnja bila oko 200.5 KB, a nakon tog vrhunca potrošnja je ostala na sličnim nivou. Vrhunac potrošnje je veoma mali, ali može se reći da je to i očekivano, program je veoma jednostavan, sa veoma malo promenljivih koje se koriste za jednostavna izračunavanja.
+
+- Analiza je izvršena potom još jednom, ali sa dodatnim parametrom massif alata, _--stack=yes_. Ovaj parametar omogućavada se prati i stanje steka tokom izvršavanja projekta.
+
+- Upotrebljene komande:
+
+```
+valgrind --tool=massif --stack=yes ./main
+
+ms_print massif.out.104350 > massif_graph_2.txt
+```
+
+- Dobijeni rezultat:
+
+```
+--------------------------------------------------------------------------------
+Command:            ./main
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.104350
+--------------------------------------------------------------------------------
+
+
+    KB
+204.0^                                                                      #
+     |                                                                  @@  #
+     |                                                               :::@ ::#
+     |                                                            :@@:: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   9.641
+
+Number of snapshots: 52
+ Detailed snapshots: [4, 34, 40, 43, 46, 49 (peak)]
+```
+
+- Dobijeni rezltati su veoma slični prethodnim, i u smislu vrednosti vrhunca potrošnje memorije, i u smislu da kada se dostigne vrhunac on ostaje približno isti do kraja izvršavanja programa.
+
+- **Zaključak**: Hip i stek se koriste odgovorno, dosegnuti vrhunac u oba slučaja je veoma mali. Ali kao što je već navedeno, to je i očekivano jer postoji veoma mali broj promenljivih i objekata.

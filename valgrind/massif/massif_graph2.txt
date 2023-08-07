@@ -1,0 +1,388 @@
+--------------------------------------------------------------------------------
+Command:            ./main
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.104350
+--------------------------------------------------------------------------------
+
+
+    KB
+204.0^                                                                      # 
+     |                                                                  @@  # 
+     |                                                               :::@ ::# 
+     |                                                            :@@:: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                           ::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+     |                                                          @::@ :: @ ::#:
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   9.641
+
+Number of snapshots: 52
+ Detailed snapshots: [4, 34, 40, 43, 46, 49 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        190,427            4,168                0             0        4,168
+  2        395,091            4,600                0             0        4,600
+  3        625,205            3,800                0             0        3,800
+  4        820,828            1,184                0             0        1,184
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5      1,069,373            1,112                0             0        1,112
+  6      1,216,030            1,112                0             0        1,112
+  7      1,456,692            1,592                0             0        1,592
+  8      1,612,661            1,432                0             0        1,432
+  9      1,786,989            1,592                0             0        1,592
+ 10      2,069,495            1,592                0             0        1,592
+ 11      2,347,889            1,592                0             0        1,592
+ 12      2,572,959            1,592                0             0        1,592
+ 13      2,703,462            1,592                0             0        1,592
+ 14      2,859,380            1,336                0             0        1,336
+ 15      3,066,741            1,592                0             0        1,592
+ 16      3,352,688            1,592                0             0        1,592
+ 17      3,639,012            1,336                0             0        1,336
+ 18      3,821,206            1,592                0             0        1,592
+ 19      3,925,733            1,336                0             0        1,336
+ 20      4,134,337            1,592                0             0        1,592
+ 21      4,290,610            1,592                0             0        1,592
+ 22      4,498,764            1,392                0             0        1,392
+ 23      4,771,297            1,112                0             0        1,112
+ 24      4,883,391            1,592                0             0        1,592
+ 25      5,092,065            1,592                0             0        1,592
+ 26      5,300,770            1,592                0             0        1,592
+ 27      5,406,176            1,336                0             0        1,336
+ 28      5,593,197            1,680                0             0        1,680
+ 29      5,855,559            1,592                0             0        1,592
+ 30      6,012,211            1,432                0             0        1,432
+ 31      6,215,177            1,112                0             0        1,112
+ 32      6,435,545            1,112                0             0        1,112
+ 33      6,681,508            1,336                0             0        1,336
+ 34      7,030,432            1,112                0             0        1,112
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 35      7,316,402            1,112                0             0        1,112
+ 36      7,493,105            1,592                0             0        1,592
+ 37      7,698,313            1,112                0             0        1,112
+ 38      7,876,717            1,592                0             0        1,592
+ 39      8,053,697            2,536            1,725           547          264
+ 40      8,178,661           98,416           95,229         1,587        1,600
+96.76% (95,229B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->73.87% (72,704B) 0x5F6FA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->73.87% (72,704B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->73.87% (72,704B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->73.87% (72,704B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->73.87% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->16.75% (16,480B) 0x66EEE98: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| ->16.65% (16,384B) 0x66F97D3: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| | ->16.65% (16,384B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |   ->16.65% (16,384B) 0x4011CA0: call_init (dl-init.c:30)
+| |     ->16.65% (16,384B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |       ->16.65% (16,384B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |         
+| ->00.10% (96B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.10% (2,064B) 0x66EEEF0: g_malloc0 (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| ->02.06% (2,032B) 0x6712B75: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| | ->02.06% (2,032B) 0x67076D2: g_slice_alloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| |   ->02.06% (2,032B) 0x66D62E1: g_hash_table_new_full (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| |     ->02.06% (2,032B) 0x66F97C2: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| |       ->02.06% (2,032B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |         ->02.06% (2,032B) 0x4011CA0: call_init (dl-init.c:30)
+| |           ->02.06% (2,032B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |             ->02.06% (2,032B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |               
+| ->00.03% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.74% (1,716B) 0x62B638E: strdup (strdup.c:42)
+| ->01.74% (1,716B) in 2 places, all below massif's threshold (1.00%)
+|   
+->01.04% (1,024B) 0x650348B: ??? (in /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0)
+| ->01.04% (1,024B) 0x64FCF00: ??? (in /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0)
+|   ->01.04% (1,024B) 0x64F9990: ??? (in /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0)
+|     ->01.04% (1,024B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|       ->01.04% (1,024B) 0x4011CA0: call_init (dl-init.c:30)
+|         ->01.04% (1,024B) 0x4011CA0: _dl_init (dl-init.c:119)
+|           ->01.04% (1,024B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|             
+->01.04% (1,024B) 0x8C7EB9B: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+| ->01.04% (1,024B) 0x8C6CC4B: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+|   ->01.04% (1,024B) 0x8C657E0: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+|     ->01.04% (1,024B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|       ->01.04% (1,024B) 0x4011CA0: call_init (dl-init.c:30)
+|         ->01.04% (1,024B) 0x4011CA0: _dl_init (dl-init.c:119)
+|           ->01.04% (1,024B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|             
+->00.22% (217B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 41      8,361,508          173,136          167,849         3,551        1,736
+ 42      8,520,018          185,208          177,674         3,686        3,848
+ 43      8,686,778          186,944          179,162         3,846        3,936
+95.84% (179,162B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->38.89% (72,704B) 0x5F6FA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->38.89% (72,704B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->38.89% (72,704B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->38.89% (72,704B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->38.89% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->37.52% (70,138B) 0x5AEEB50: QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| ->35.06% (65,538B) 0x5B42042: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| | ->35.06% (65,538B) 0x5B4029F: QVariantAnimation::registerInterpolator(QVariant (*)(void const*, void const*, double), int) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| |   ->35.06% (65,538B) 0x546EA74: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |     ->35.06% (65,538B) 0x5069D28: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |       ->35.06% (65,538B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |         ->35.06% (65,538B) 0x4011CA0: call_init (dl-init.c:30)
+| |           ->35.06% (65,538B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |             ->35.06% (65,538B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |               
+| ->02.46% (4,600B) 0x5AC531F: QString::fromLatin1(QByteArrayView) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| | ->02.46% (4,600B) 0x5329C3A: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |   ->02.46% (4,600B) in 135 places, all below massif's threshold (1.00%)
+| |     
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.82% (16,480B) 0x66EEE98: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| ->08.76% (16,384B) 0x66F97D3: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| | ->08.76% (16,384B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |   ->08.76% (16,384B) 0x4011CA0: call_init (dl-init.c:30)
+| |     ->08.76% (16,384B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |       ->08.76% (16,384B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |         
+| ->00.05% (96B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->04.38% (8,192B) 0x5FD4D33: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->04.38% (8,192B) 0x5FD8F96: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|   ->04.38% (8,192B) 0x5FD9143: std::basic_ifstream<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|     ->04.38% (8,192B) 0x13E7DE: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:54)
+|       ->04.38% (8,192B) 0x1467BB: EnergyLoss::EnergyLoss(double, double, double, double, double, double, int, int, int, double, int, int, Wetness, double, double, double, int, double, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (EnergyLoss.hpp:27)
+|         ->04.38% (8,192B) 0x1512BD: main (main.cpp:40)
+|           
+->03.00% (5,600B) in 15 places, all below massif's threshold (1.00%)
+| 
+->01.11% (2,080B) 0x625DC41: __new_exitfn (cxa_atexit.c:114)
+| ->01.11% (2,080B) 0x625DE26: __internal_atexit (cxa_atexit.c:44)
+|   ->01.11% (2,080B) 0x625DE26: __cxa_atexit (cxa_atexit.c:70)
+|     ->01.11% (2,080B) in 2 places, all below massif's threshold (1.00%)
+|       
+->01.10% (2,064B) 0x66EEEF0: g_malloc0 (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| ->01.09% (2,032B) 0x6712B75: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| | ->01.09% (2,032B) 0x67076D2: g_slice_alloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| |   ->01.09% (2,032B) 0x66D62E1: g_hash_table_new_full (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| |     ->01.09% (2,032B) 0x66F97C2: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| |       ->01.09% (2,032B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |         ->01.09% (2,032B) 0x4011CA0: call_init (dl-init.c:30)
+| |           ->01.09% (2,032B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |             ->01.09% (2,032B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |               
+| ->00.02% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.02% (1,904B) 0x15027F: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  ->01.02% (1,904B) 0x14F655: std::allocator_traits<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >::allocate(std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> >&, unsigned long) (alloc_traits.h:460)
+    ->01.02% (1,904B) 0x14F331: std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >::_M_allocate_node<std::pair<int const, SinglePipe> >(std::pair<int const, SinglePipe>&&) (hashtable_policy.h:2033)
+      ->01.02% (1,904B) 0x14DB9E: std::_Hashtable<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Scoped_node::_Scoped_node<std::pair<int const, SinglePipe> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >*, std::pair<int const, SinglePipe>&&) (hashtable.h:286)
+        ->01.02% (1,904B) 0x14C2D3: std::pair<std::__detail::_Node_iterator<std::pair<int const, SinglePipe>, false, false>, bool> std::_Hashtable<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_emplace<std::pair<int const, SinglePipe> >(std::integral_constant<bool, true>, std::pair<int const, SinglePipe>&&) (hashtable.h:1728)
+          ->01.02% (1,904B) 0x14B32B: std::pair<std::__detail::_Node_iterator<std::pair<int const, SinglePipe>, false, false>, bool> std::__detail::_Insert<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, false>::insert<std::pair<int const, SinglePipe>, void>(std::pair<int const, SinglePipe>&&) (hashtable_policy.h:1021)
+            ->01.02% (1,904B) 0x149F91: std::unordered_map<int, SinglePipe, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, SinglePipe> > >::insert(std::pair<int const, SinglePipe>&&) (unordered_map.h:587)
+              ->01.02% (1,904B) 0x13EA32: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:62)
+                ->01.02% (1,904B) 0x1467BB: EnergyLoss::EnergyLoss(double, double, double, double, double, double, int, int, int, double, int, int, Wetness, double, double, double, int, double, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (EnergyLoss.hpp:27)
+                  ->01.02% (1,904B) 0x1512BD: main (main.cpp:40)
+                    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 44      8,902,529          196,336          189,514         4,110        2,712
+ 45      9,079,181          190,992          182,730         4,286        3,976
+ 46      9,313,063          202,016          193,402         4,550        4,064
+95.74% (193,402B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->35.99% (72,704B) 0x5F6FA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->35.99% (72,704B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->35.99% (72,704B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->35.99% (72,704B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->35.99% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->34.72% (70,138B) 0x5AEEB50: QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| ->32.44% (65,538B) 0x5B42042: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| | ->32.44% (65,538B) 0x5B4029F: QVariantAnimation::registerInterpolator(QVariant (*)(void const*, void const*, double), int) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| |   ->32.44% (65,538B) 0x546EA74: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |     ->32.44% (65,538B) 0x5069D28: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |       ->32.44% (65,538B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |         ->32.44% (65,538B) 0x4011CA0: call_init (dl-init.c:30)
+| |           ->32.44% (65,538B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |             ->32.44% (65,538B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |               
+| ->02.28% (4,600B) 0x5AC531F: QString::fromLatin1(QByteArrayView) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| | ->02.28% (4,600B) 0x5329C3A: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |   ->02.28% (4,600B) in 135 places, all below massif's threshold (1.00%)
+| |     
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.16% (16,480B) 0x66EEE98: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| ->08.11% (16,384B) 0x66F97D3: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| | ->08.11% (16,384B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |   ->08.11% (16,384B) 0x4011CA0: call_init (dl-init.c:30)
+| |     ->08.11% (16,384B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |       ->08.11% (16,384B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |         
+| ->00.05% (96B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.11% (16,384B) 0x5FD4D33: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->08.11% (16,384B) 0x5FD8F96: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|   ->08.11% (16,384B) 0x5FD9143: std::basic_ifstream<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|     ->04.06% (8,192B) 0x13E7DE: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:54)
+|     | ->04.06% (8,192B) 0x145591: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:25)
+|     | | ->04.06% (8,192B) 0x1514AC: main (main.cpp:45)
+|     | |   
+|     | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     | 
+|     ->04.06% (8,192B) 0x13EA86: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:66)
+|       ->04.06% (8,192B) 0x145591: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:25)
+|       | ->04.06% (8,192B) 0x1514AC: main (main.cpp:45)
+|       |   
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->04.28% (8,656B) in 17 places, all below massif's threshold (1.00%)
+| 
+->02.42% (4,896B) 0x15027F: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+| ->02.42% (4,896B) 0x14F655: std::allocator_traits<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >::allocate(std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> >&, unsigned long) (alloc_traits.h:460)
+|   ->02.42% (4,896B) 0x14F331: std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >::_M_allocate_node<std::pair<int const, SinglePipe> >(std::pair<int const, SinglePipe>&&) (hashtable_policy.h:2033)
+|     ->02.42% (4,896B) 0x14DB9E: std::_Hashtable<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Scoped_node::_Scoped_node<std::pair<int const, SinglePipe> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >*, std::pair<int const, SinglePipe>&&) (hashtable.h:286)
+|       ->02.42% (4,896B) 0x14C2D3: std::pair<std::__detail::_Node_iterator<std::pair<int const, SinglePipe>, false, false>, bool> std::_Hashtable<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_emplace<std::pair<int const, SinglePipe> >(std::integral_constant<bool, true>, std::pair<int const, SinglePipe>&&) (hashtable.h:1728)
+|         ->02.42% (4,896B) 0x14B32B: std::pair<std::__detail::_Node_iterator<std::pair<int const, SinglePipe>, false, false>, bool> std::__detail::_Insert<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, false>::insert<std::pair<int const, SinglePipe>, void>(std::pair<int const, SinglePipe>&&) (hashtable_policy.h:1021)
+|           ->02.42% (4,896B) 0x149F91: std::unordered_map<int, SinglePipe, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, SinglePipe> > >::insert(std::pair<int const, SinglePipe>&&) (unordered_map.h:587)
+|             ->02.42% (4,896B) 0x13EA32: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:62)
+|               ->01.21% (2,448B) 0x145591: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:25)
+|               | ->01.21% (2,448B) 0x1514AC: main (main.cpp:45)
+|               |   
+|               ->01.21% (2,448B) 0x1467BB: EnergyLoss::EnergyLoss(double, double, double, double, double, double, int, int, int, double, int, int, Wetness, double, double, double, int, double, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (EnergyLoss.hpp:27)
+|                 ->01.21% (2,448B) 0x1512BD: main (main.cpp:40)
+|                   
+->01.03% (2,080B) 0x625DC41: __new_exitfn (cxa_atexit.c:114)
+| ->01.03% (2,080B) 0x625DE26: __internal_atexit (cxa_atexit.c:44)
+|   ->01.03% (2,080B) 0x625DE26: __cxa_atexit (cxa_atexit.c:70)
+|     ->01.03% (2,080B) in 2 places, all below massif's threshold (1.00%)
+|       
+->01.02% (2,064B) 0x66EEEF0: g_malloc0 (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  ->01.01% (2,032B) 0x6712B75: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  | ->01.01% (2,032B) 0x67076D2: g_slice_alloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  |   ->01.01% (2,032B) 0x66D62E1: g_hash_table_new_full (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  |     ->01.01% (2,032B) 0x66F97C2: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+  |       ->01.01% (2,032B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+  |         ->01.01% (2,032B) 0x4011CA0: call_init (dl-init.c:30)
+  |           ->01.01% (2,032B) 0x4011CA0: _dl_init (dl-init.c:119)
+  |             ->01.01% (2,032B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+  |               
+  ->00.02% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 47      9,578,131          196,208          188,137         4,759        3,312
+ 48      9,754,830          197,904          189,729         4,935        3,240
+ 49      9,900,371          208,856          199,514         5,118        4,224
+95.53% (199,514B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.81% (72,704B) 0x5F6FA69: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->34.81% (72,704B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->34.81% (72,704B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->34.81% (72,704B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->34.81% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->33.58% (70,138B) 0x5AEEB50: QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| ->31.38% (65,538B) 0x5B42042: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| | ->31.38% (65,538B) 0x5B4029F: QVariantAnimation::registerInterpolator(QVariant (*)(void const*, void const*, double), int) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| |   ->31.38% (65,538B) 0x546EA74: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |     ->31.38% (65,538B) 0x5069D28: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |       ->31.38% (65,538B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |         ->31.38% (65,538B) 0x4011CA0: call_init (dl-init.c:30)
+| |           ->31.38% (65,538B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |             ->31.38% (65,538B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |               
+| ->02.20% (4,600B) 0x5AC531F: QString::fromLatin1(QByteArrayView) (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Core.so.6.2.1)
+| | ->02.20% (4,600B) 0x5329C3A: ??? (in /home/mira/Qt/6.2.1/gcc_64/lib/libQt6Gui.so.6.2.1)
+| |   ->02.20% (4,600B) in 135 places, all below massif's threshold (1.00%)
+| |     
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->07.89% (16,480B) 0x66EEE98: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| ->07.84% (16,384B) 0x66F97D3: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6)
+| | ->07.84% (16,384B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+| |   ->07.84% (16,384B) 0x4011CA0: call_init (dl-init.c:30)
+| |     ->07.84% (16,384B) 0x4011CA0: _dl_init (dl-init.c:119)
+| |       ->07.84% (16,384B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+| |         
+| ->00.05% (96B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->07.84% (16,384B) 0x5FD4D33: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->07.84% (16,384B) 0x5FD8F96: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|   ->07.84% (16,384B) 0x5FD9143: std::basic_ifstream<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+|     ->03.92% (8,192B) 0x13E7DE: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:54)
+|     | ->03.92% (8,192B) 0x13F277: FrictionalLength::FrictionalLength(double, double, double, double, double, double, int, int, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FrictionalLength.hpp:22)
+|     | | ->03.92% (8,192B) 0x142824: Tcompesation::Tcompesation(double, double, double, double, double, double, int, int, int, double, double, double, double, int, int, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Tcompesation.hpp:24)
+|     | |   ->03.92% (8,192B) 0x1516C7: main (main.cpp:51)
+|     | |     
+|     | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     | 
+|     ->03.92% (8,192B) 0x13EA86: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:66)
+|       ->03.92% (8,192B) 0x13F277: FrictionalLength::FrictionalLength(double, double, double, double, double, double, int, int, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FrictionalLength.hpp:22)
+|       | ->03.92% (8,192B) 0x142824: Tcompesation::Tcompesation(double, double, double, double, double, double, int, int, int, double, double, double, double, int, int, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Tcompesation.hpp:24)
+|       |   ->03.92% (8,192B) 0x1516C7: main (main.cpp:51)
+|       |     
+|       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->06.44% (13,448B) in 20 places, all below massif's threshold (1.00%)
+| 
+->03.52% (7,344B) 0x15027F: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+| ->03.52% (7,344B) 0x14F655: std::allocator_traits<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >::allocate(std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> >&, unsigned long) (alloc_traits.h:460)
+|   ->03.52% (7,344B) 0x14F331: std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >::_M_allocate_node<std::pair<int const, SinglePipe> >(std::pair<int const, SinglePipe>&&) (hashtable_policy.h:2033)
+|     ->03.52% (7,344B) 0x14DB9E: std::_Hashtable<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Scoped_node::_Scoped_node<std::pair<int const, SinglePipe> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, SinglePipe>, false> > >*, std::pair<int const, SinglePipe>&&) (hashtable.h:286)
+|       ->03.52% (7,344B) 0x14C2D3: std::pair<std::__detail::_Node_iterator<std::pair<int const, SinglePipe>, false, false>, bool> std::_Hashtable<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_emplace<std::pair<int const, SinglePipe> >(std::integral_constant<bool, true>, std::pair<int const, SinglePipe>&&) (hashtable.h:1728)
+|         ->03.52% (7,344B) 0x14B32B: std::pair<std::__detail::_Node_iterator<std::pair<int const, SinglePipe>, false, false>, bool> std::__detail::_Insert<int, std::pair<int const, SinglePipe>, std::allocator<std::pair<int const, SinglePipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, false>::insert<std::pair<int const, SinglePipe>, void>(std::pair<int const, SinglePipe>&&) (hashtable_policy.h:1021)
+|           ->03.52% (7,344B) 0x149F91: std::unordered_map<int, SinglePipe, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, SinglePipe> > >::insert(std::pair<int const, SinglePipe>&&) (unordered_map.h:587)
+|             ->03.52% (7,344B) 0x13EA32: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:62)
+|               ->01.17% (2,448B) 0x13F277: FrictionalLength::FrictionalLength(double, double, double, double, double, double, int, int, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (FrictionalLength.hpp:22)
+|               | ->01.17% (2,448B) 0x142824: Tcompesation::Tcompesation(double, double, double, double, double, double, int, int, int, double, double, double, double, int, int, int, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Tcompesation.hpp:24)
+|               |   ->01.17% (2,448B) 0x1516C7: main (main.cpp:51)
+|               |     
+|               ->01.17% (2,448B) 0x145591: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:25)
+|               | ->01.17% (2,448B) 0x1514AC: main (main.cpp:45)
+|               |   
+|               ->01.17% (2,448B) 0x1467BB: EnergyLoss::EnergyLoss(double, double, double, double, double, double, int, int, int, double, int, int, Wetness, double, double, double, int, double, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (EnergyLoss.hpp:27)
+|                 ->01.17% (2,448B) 0x1512BD: main (main.cpp:40)
+|                   
+->01.44% (3,016B) 0x150379: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<int const, TwinPipe>, false> >::allocate(unsigned long, void const*) (new_allocator.h:121)
+  ->01.44% (3,016B) 0x14F74B: std::allocator_traits<std::allocator<std::__detail::_Hash_node<std::pair<int const, TwinPipe>, false> > >::allocate(std::allocator<std::__detail::_Hash_node<std::pair<int const, TwinPipe>, false> >&, unsigned long) (alloc_traits.h:460)
+    ->01.44% (3,016B) 0x14F49F: std::__detail::_Hash_node<std::pair<int const, TwinPipe>, false>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, TwinPipe>, false> > >::_M_allocate_node<std::pair<int const, TwinPipe> >(std::pair<int const, TwinPipe>&&) (hashtable_policy.h:2033)
+      ->01.44% (3,016B) 0x14DD1C: std::_Hashtable<int, std::pair<int const, TwinPipe>, std::allocator<std::pair<int const, TwinPipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Scoped_node::_Scoped_node<std::pair<int const, TwinPipe> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<int const, TwinPipe>, false> > >*, std::pair<int const, TwinPipe>&&) (hashtable.h:286)
+        ->01.44% (3,016B) 0x14C4B3: std::pair<std::__detail::_Node_iterator<std::pair<int const, TwinPipe>, false, false>, bool> std::_Hashtable<int, std::pair<int const, TwinPipe>, std::allocator<std::pair<int const, TwinPipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_emplace<std::pair<int const, TwinPipe> >(std::integral_constant<bool, true>, std::pair<int const, TwinPipe>&&) (hashtable.h:1728)
+          ->01.44% (3,016B) 0x14B381: std::pair<std::__detail::_Node_iterator<std::pair<int const, TwinPipe>, false, false>, bool> std::__detail::_Insert<int, std::pair<int const, TwinPipe>, std::allocator<std::pair<int const, TwinPipe> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, false>::insert<std::pair<int const, TwinPipe>, void>(std::pair<int const, TwinPipe>&&) (hashtable_policy.h:1021)
+            ->01.44% (3,016B) 0x14A0A9: std::unordered_map<int, TwinPipe, std::hash<int>, std::equal_to<int>, std::allocator<std::pair<int const, TwinPipe> > >::insert(std::pair<int const, TwinPipe>&&) (unordered_map.h:587)
+              ->01.44% (3,016B) 0x13EC4B: Project::Project(double, double, double, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Project.hpp:74)
+                ->01.44% (3,016B) in 3 places, all below massif's threshold (1.00%)
+                  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50     10,004,916          187,056          181,233         4,927          896
+ 51     10,109,445          165,312          162,852         1,596          864
