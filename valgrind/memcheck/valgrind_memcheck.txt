@@ -1,0 +1,136 @@
+==28911== Memcheck, a memory error detector
+==28911== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==28911== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==28911== Command: ./main
+==28911== Parent PID: 28286
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x14608A: PressureLoss::lambda() (PressureLoss.hpp:85)
+==28911==    by 0x14625A: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x145AB8: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:40)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x1460D8: PressureLoss::lambda() (PressureLoss.hpp:87)
+==28911==    by 0x14625A: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x145AB8: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:40)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x613521E: __ieee754_pow_fma (e_pow.c:292)
+==28911==    by 0x60F5277: pow@@GLIBC_2.29 (w_pow_template.c:32)
+==28911==    by 0x146295: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x1458EC: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:34)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x6135436: __ieee754_pow_fma (e_pow.c:314)
+==28911==    by 0x60F5277: pow@@GLIBC_2.29 (w_pow_template.c:32)
+==28911==    by 0x146295: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x1458EC: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:34)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x61356DA: __ieee754_pow_fma (e_pow.c:317)
+==28911==    by 0x60F5277: pow@@GLIBC_2.29 (w_pow_template.c:32)
+==28911==    by 0x146295: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x1458EC: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:34)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x61356E3: __ieee754_pow_fma (e_pow.c:322)
+==28911==    by 0x60F5277: pow@@GLIBC_2.29 (w_pow_template.c:32)
+==28911==    by 0x146295: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x1458EC: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:34)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x60F529F: pow@@GLIBC_2.29 (w_pow_template.c:33)
+==28911==    by 0x146295: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911== 
+==28911== Conditional jump or move depends on uninitialised value(s)
+==28911==    at 0x60F52B8: pow@@GLIBC_2.29 (w_pow_template.c:35)
+==28911==    by 0x146295: PressureLoss::R() (PressureLoss.hpp:96)
+==28911==    by 0x151553: main (main.cpp:47)
+==28911==  Uninitialised value was created by a heap allocation
+==28911==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==28911==    by 0x14FD9D: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:121)
+==28911==    by 0x14EADA: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:460)
+==28911==    by 0x14CE61: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:346)
+==28911==    by 0x14CFE0: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:440)
+==28911==    by 0x14B911: double& std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:121)
+==28911==    by 0x14A2ED: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:1204)
+==28911==    by 0x1458EC: PressureLoss::PressureLoss(double, double, double, double, double, double, int, int, int, double, double, double, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (PressureLoss.hpp:34)
+==28911==    by 0x1514AC: main (main.cpp:45)
+==28911== 
+==28911== 
+==28911== HEAP SUMMARY:
+==28911==     in use at exit: 18,612 bytes in 6 blocks
+==28911==   total heap usage: 1,037 allocs, 1,031 frees, 273,811 bytes allocated
+==28911== 
+==28911== LEAK SUMMARY:
+==28911==    definitely lost: 0 bytes in 0 blocks
+==28911==    indirectly lost: 0 bytes in 0 blocks
+==28911==      possibly lost: 0 bytes in 0 blocks
+==28911==    still reachable: 18,612 bytes in 6 blocks
+==28911==         suppressed: 0 bytes in 0 blocks
+==28911== Reachable blocks (those to which a pointer was found) are not shown.
+==28911== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==28911== 
+==28911== For lists of detected and suppressed errors, rerun with: -s
+==28911== ERROR SUMMARY: 8 errors from 8 contexts (suppressed: 0 from 0)
