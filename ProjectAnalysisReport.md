@@ -226,7 +226,7 @@ Number of snapshots: 52
 
 - **Zaključak**: Hip i stek se koriste odgovorno, dosegnuti vrhunac u oba slučaja je veoma mali. Ali kao što je već navedeno, to je i očekivano jer postoji veoma mali broj promenljivih i objekata.
 
-## Clang - Tidy
+## ClangTidy
 
 - Naredni alat koji je upotrebljen za analizu je alat ClangTidy. Ovaj alat je deo Clang/LLVM projekta koji automatski refaktoriše C++ kod, tačnije, proverava kod i pronalazi stilske i programske greške. Njčešće se koristi za modernizaciju koda, naime novi standardi C++ uveli su razne nove funkcionalnosti, poput upotrebe koncepata auto, override, lambda... medjutim i dalje postoji velika količina koda koji nisu adaptirani ovim novim standardima, pa se za te potrebe modernizacije može koristiti ClangTidy.
 
@@ -255,3 +255,52 @@ Number of snapshots: 52
 - Analizom ispisanih preporuka potvrdjuju se ručno uočena zapažanja koja su i iznad pomenuta, naime, najveći broj preporuka se odnosi na magične konstante, upotrebu neinicijalizovanih promenljivih i implicitne konverzije.
 
 **Zaključak:** Nakon upotrebe alata potvrdjuju se ranije navedena zapažanja, kod nije napisan na ispravan, jasan i kozistentan način, što često dovodi do nejasnoća i zabuna.
+
+## ClangFormat
+
+- Poslednji alat koji je upotrebljen za analizu projekta je alat ClangFormat, ovaj alat se koristi za automatsko formatiranje koda. U ponudi je više različitih stilova programiranja. Neki od dostupnih stilova su `LLVM, Google, Chromium, Mozilla, WebKit, Microsoft, GNU`. Može se iskoristiti bilo koji od ovih stilova, može se kreirati sopstveni stil, a može se i iskoristiti neki od postojećih stilova kao osnova koja se menja radi kreiranja sopstvenog stila.
+
+- U ovom slučaju biće upotrebljen stil `Google` sa minimalnom izmenom.
+
+- Odabir osnovnog stila se vrši sledećom komandom, dok se kao rezultat komande se dobija .clang-format fajl koji se dalje može menjati radi kreiranja sopstvenog stila.
+
+- Deo sadržaja .clang-format fajla:
+
+```
+---
+Language:        Cpp
+# BasedOnStyle:  Google
+AccessModifierOffset: -1
+AlignAfterOpenBracket: Align
+AlignConsecutiveMacros: false
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Left
+AlignOperands:   true
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: All
+AllowShortLambdasOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: true
+BinPackParameters: true
+```
+
+- Čisto radi demonstracije promenjena je širina taba, tj `tabWidth:4 umesto tabWidth:8`
+
+- Potom je kreirani stil upotrebljen za formatiranje projekta upotrebom clang-format komande pri čemu je za parametar style upotrebljena opcija file jer je kreiran sopstveni fajl. Opet isto radi demonstracije, formatiranje je primenjeno samo na jedan fajl
+
+`clang-format -i -style=file src/gui/mainwindow.cpp `
+
+- Formatiranje je uspešno izvedeno.
+
+**\* Zaključak:** Proučavanjem razlike izmedju dobijenog formatiranog i originalnog koda, uočeno je da je kod mogao biti napisan doslednije u stilskom smislu.
