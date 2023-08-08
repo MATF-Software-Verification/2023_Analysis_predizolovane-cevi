@@ -225,3 +225,33 @@ Number of snapshots: 52
 - Dobijeni rezltati su veoma slični prethodnim, i u smislu vrednosti vrhunca potrošnje memorije, i u smislu da kada se dostigne vrhunac on ostaje približno isti do kraja izvršavanja programa.
 
 - **Zaključak**: Hip i stek se koriste odgovorno, dosegnuti vrhunac u oba slučaja je veoma mali. Ali kao što je već navedeno, to je i očekivano jer postoji veoma mali broj promenljivih i objekata.
+
+## Clang - Tidy
+
+- Naredni alat koji je upotrebljen za analizu je alat ClangTidy. Ovaj alat je deo Clang/LLVM projekta koji automatski refaktoriše C++ kod, tačnije, proverava kod i pronalazi stilske i programske greške. Njčešće se koristi za modernizaciju koda, naime novi standardi C++ uveli su razne nove funkcionalnosti, poput upotrebe koncepata auto, override, lambda... medjutim i dalje postoji velika količina koda koji nisu adaptirani ovim novim standardima, pa se za te potrebe modernizacije može koristiti ClangTidy.
+
+- U nastavku će biti prikazana upotrebe ovog alata iz Qt Creator okruženja.
+
+- Prvo je potrebno podesiti ClangTidy alat u okviru Qt Creator okruženja.
+- Potrebno je ispratiti sledeće korake: `Tools -> Options -> Analyzer`
+- U kartici Clang Tools, u sekciji Run Options odabrati Custom Clang-Tidy checks.
+
+![clangTidy1](/clang/clang-tidy/clangTidy1.png)
+
+- Kliknuti na copy dok je kursor na _Default Clang-Tidy and Clazy checks_, kopiji dodeliti ime _Custom Clang-Tidy checks_, definisati koje su željene opcije za alat. U ovom primeru su odabrane opicije koje se tiču modernizacije i čitljivosti koda
+
+![clangTidy2](/clang/clang-tidy/clangTidy2.png)
+
+- Potom je potrbno pokrenuti alat prateći sledeće instrukcije: `Analyze -> Clang-Tidy and Clazy...`
+- Otvara se prozor u kojem treba izabrati klase koje se analiziraju
+
+![clangTidy3](/clang/clang-tidy/clangTidy3.png)
+
+- Kliknuti na dugme Analyze čime se pokreće clang-tidy
+- U ovom primeru je dobijen sledeći izlaz, prikazuju sve preporuke za refaktorisanje koda koje alat preporučuje za taj fajl. Moguće je odabrati opciju da se sve preporuke primene, tj. da se kod refaktoriše prema tim preporukama.
+
+![clangTidy4](/clang/clang-tidy/clangTidy4.png)
+
+- Analizom ispisanih preporuka potvrdjuju se ručno uočena zapažanja koja su i iznad pomenuta, naime, najveći broj preporuka se odnosi na magične konstante, upotrebu neinicijalizovanih promenljivih i implicitne konverzije.
+
+**Zaključak:** Nakon upotrebe alata potvrdjuju se ranije navedena zapažanja, kod nije napisan na ispravan, jasan i kozistentan način, što često dovodi do nejasnoća i zabuna.
